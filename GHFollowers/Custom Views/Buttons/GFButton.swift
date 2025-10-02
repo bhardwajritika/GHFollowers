@@ -9,6 +9,8 @@ import UIKit
 
 class GFButton: UIButton {
 
+    
+    // typical initializer
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -18,18 +20,31 @@ class GFButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(backgrounColor: UIColor, title: String) {
-        super.init(frame: .zero)
-        self.backgroundColor = backgrounColor
-        self.setTitle(title, for: .normal)
-        configure()
+    //custom initializer
+    convenience init(backgroundColor: UIColor, title: String) {
+        self.init(frame: .zero)
+        set(backgroundColor: backgroundColor, title: title)
+//        configure()
     }
     
     private func configure() {
-        layer.cornerRadius      = 10
-        setTitleColor(.white, for: .normal)
-        titleLabel?.font        = UIFont.preferredFont(forTextStyle: .headline)
+        configuration = .tinted()
+        configuration?.cornerStyle = .medium
         translatesAutoresizingMaskIntoConstraints   = false
+//        layer.cornerRadius      = 10
+//        setTitleColor(.white, for: .normal)
+//        titleLabel?.font        = UIFont.preferredFont(forTextStyle: .headline)
+        
+    }
+    
+    
+    func set(backgroundColor: UIColor, title: String) {
+        
+        self.configuration?.baseBackgroundColor = backgroundColor
+        self.configuration?.baseForegroundColor = backgroundColor
+        self.configuration?.title = title
+//        self.backgroundColor = backgroundColor
+//        setTitle(title, for: .normal)
     }
     
 }

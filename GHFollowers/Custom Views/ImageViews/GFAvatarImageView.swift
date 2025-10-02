@@ -46,12 +46,12 @@ class GFAvatarImageView: UIImageView {
         
         // Network call
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            guard let self = self else { return }
+            guard let self else { return }
             
             // error check
             if error != nil { return }
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
-            guard let data = data else { return }
+            guard let data else { return }
             
             guard let image = UIImage(data: data) else { return }
             

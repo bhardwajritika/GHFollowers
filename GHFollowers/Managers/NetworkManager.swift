@@ -37,7 +37,7 @@ class NetworkManager {
             }
             
             // check if data is nil
-            guard let data = data else {
+            guard let data else {
                 completed(.failure( .invalidData))
                 return
             }
@@ -85,7 +85,7 @@ class NetworkManager {
             }
             
             // check if data is nil
-            guard let data = data else {
+            guard let data else {
                 completed(.failure( .invalidData))
                 return
             }
