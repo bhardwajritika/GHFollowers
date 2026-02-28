@@ -46,14 +46,19 @@ Users can view followers, inspect profile details, and save favorite profiles fo
       <b>Add To favorites</b>
     </td>
     <td align="center">
-      <img src="./GHScreenshots/FavoriteList.png" width="250" /><br/>
+      <img src="./GHScreenshots/FavoriteLists.png" width="250" /><br/>
       <b>Favorite List</b>
     </td>
   </tr>
    <tr>
     <td align="center">
+      <img src="./GHScreenshots/SearchUser.png" width="250" /><br/>
+      <b>Search User</b>
+      </td>
+    <td align="center">
       <img src="./GHScreenshots/userDetail.png" width="250" /><br/>
-      <b>Add To favorites</b>
+      <b>User Detail</b>
+    </td>
   </tr>
 </table>
 
